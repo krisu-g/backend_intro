@@ -1,0 +1,9 @@
+{% extends 'form_app/base.html' %}
+{% block title %}Strona z formularzem rejestracyjnym{% endblock title %}
+{% block header %}Strona z formularzem rejestracyjnym - nagłówek{% endblock header %}
+{% block body %}
+  <form action="{% url 'form_app:task_list' %}" method="post">{% csrf_token %}
+    <input type="text" name="task" />
+    <input type="submit" value="Zarejestruj">
+  </form>
+{% endblock body %}

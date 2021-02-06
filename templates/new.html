@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>przycisk</title>
+    <style>
+        .btn {
+            background-color: blue;
+            padding: 1%;
+            color: white;
+            font: 22px bold;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector(".btn").onclick = function() {
+                this.innerHTML = "Przyciśnięty";
+            };
+        })
+    </script>
+</head>
+<body>
+<button class="btn">Przyciśnij</button>
+</body>
+</html>

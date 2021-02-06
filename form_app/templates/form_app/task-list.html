@@ -1,0 +1,11 @@
+{% extends 'form_app/base.html' %}
+{% block title %}Strona z listą zadań{% endblock title %}
+{% block header %}Strona z listą zadań - nagłówek{% endblock header %}
+{% block body %}
+  <h2>Lista zadań:</h2>
+  <ol>
+  {% for task in tasks %}
+    <li>{{task}}</li>
+  {% endfor %}
+  </ol>
+{% endblock body %}

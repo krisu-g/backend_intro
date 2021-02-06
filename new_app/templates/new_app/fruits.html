@@ -1,0 +1,18 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Is i New Year</title>
+  <link rel="stylesheet" href="{% static 'new_app/css/style.css' %}">
+</head>
+<body>
+  <h3>Lista owoców</h3>
+  <ul>
+  {% for fruit in fruits %}
+    <li>{{fruit}}</li>
+  {% endfor %}
+  </ul>
+</body>
+</html>
