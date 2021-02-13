@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Tasks
 from django.shortcuts import Http404, get_object_or_404, redirect
-
+from django.views.decorators.http import require_http_methods
 
 # Create your views here.
 def register(request):
@@ -54,3 +54,11 @@ def update(request, task_id):
         
         return redirect('form_app4:task_list')
     raise Http404
+
+
+@require_http_methods(['POST'])
+def delete(request, task_id):
+    task = get_object_or_404(Tasks, id=task_id)
+    task.delete()
+    return redirect('form_app4:task_list')
+    
